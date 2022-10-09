@@ -1,0 +1,283 @@
+/* START DOCUMENT */
+
+/*body{ height:100%; }*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   scroll-behavior: smooth;
+}
+
+/* END DOCUMENT */
+
+
+
+
+/* START PRINT */
+
+@media print {
+
+  .print-hidden,
+  .d-print-none {
+    display:none !important;
+  }
+
+}
+
+/* END PRINT */
+
+
+
+/* START TRANSITIONS */
+
+body .fade-enter-active,
+body .fade-leave-active {
+  transition: opacity 0.043s ease-out;
+}
+body .fade-enter,
+body .fade-leave-active {
+  opacity: 0.5;
+}
+
+/* END TRANSITIONS */
+
+/*https://www.joshwcomeau.com/gradient-generator/*/
+/*background-image: linear-gradient(
+  60deg,
+  hsl(240deg 100% 20%) 1%,
+  hsl(289deg 100% 21%) 43%,
+  hsl(315deg 100% 27%) 50%,
+  hsl(329deg 100% 36%) 51%,
+  hsl(337deg 100% 43%) 51%,
+  hsl(357deg 91% 59%) 49%,
+  hsl(17deg 100% 59%) 49%,
+  hsl(34deg 100% 53%) 50%,
+  hsl(45deg 100% 50%) 57%,
+  hsl(55deg 100% 50%) 99%
+);*/
+
+/* START BACKGROUNDS */
+
+.unsplash{
+  background-image:url('https://source.unsplash.com/random/featured?moon');
+}
+.unsplash-moons{
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/dOlBjtJfFkk');
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/dOlBjtJfFkk');
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/dOlBjtJfFkk');
+  background-image: url('https://source.unsplash.com/dOlBjtJfFkk');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.unslash-bg {
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/featured?night,moon');
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/featured?night,moon');
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/featured?night,moon');
+  background-image: url('https://source.unsplash.com/random/featured?night,moon,dark');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.backdrop-filter{
+  backdrop-filter: blur(5px);
+}
+.unslash-bg-2 {
+  background-image: url('https://source.unsplash.com/random/featured?moon,night,dark');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 */
+.frosted-glass-light {
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+}
+.frosted-glass {
+  background-color: rgba(100, 100, 100, .15);  
+  backdrop-filter: blur(5px);
+}
+.frosted-glass-dark {
+  background-color: rgba(0, 0, 0, .5);  
+  backdrop-filter: blur(10px);
+}
+.bg-gradient-t-black {
+  background-color: #000000b8;
+  background: linear-gradient(0deg, #000 0, #ffffff00 100%);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: -4px !important;
+}
+
+
+/* END BACKGROUNDS */
+
+
+
+
+/* START VIDEO */
+
+/* https://stackoverflow.com/questions/24579785/force-iframe-youtube-video-to-center-fit-and-full-cover-the-screen-in-the-backgr */
+
+:root {
+  --video-width: 100vw;
+  --video-height: 100vh;
+}
+@media (min-aspect-ratio: 16/9) {
+  :root {
+    --video-height: 56.25vw;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  :root {
+    --video-width: 177.78vh;
+  }
+}
+
+.video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-background iframe,
+.video-background .frosted-glass-light,
+.video-background .frosted-glass-dark,
+.video-background .frosted-glass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--video-width);
+  height: var(--video-height);
+  transform: translate(-50%, -50%);
+}
+
+/* END VIDEO */
+
+
+
+.min-h-screen{
+ min-height: 100vh;
+}
+.min-h-full{
+ min-height: 100%;
+}
+.min-h-auto{
+ min-height: auto;
+}
+/*.shmb{ min-height: calc( 100vh ); }*/
+/*.breadcrumb > li + li:before { content: '>\00a0'; color: #444; }*/
+/*.sidebar.bg-dark .vb > .vb-dragger > .vb-dragger-styler
+{ background-color:rgba(255, 255, 255, 0.6); }
+*/
+/*.overlay {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 10; }*/
+
+/*html{ min-height:100%; position:relative; }*/
+
+/* END ULITIES */
+
+
+
+
+
+/* START SWITCH CHECKBOX */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5em;
+  height: 1.4em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  /*-webkit-transition: .1s;*/
+  /*transition: .1s;*/
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1em;
+  width: 1em;
+  left: 4px;
+  bottom: 0.2em;
+  background-color: white;
+    box-shadow: inset 28px -4px 0px 0px #fff;
+  -webkit-transition: .1s;
+  transition: .1s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(107, 70, 193);
+  box-shadow: none;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(107, 70, 193);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1em);
+  -ms-transform: translateX(1em);
+  transform: translateX(1em);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* END SWITCH CHECKBOX */
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
