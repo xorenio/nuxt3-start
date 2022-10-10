@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter + tailwind + pinia 
+# Nuxt 3 Minimal Starter + tailwind + pinia + i18n
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
