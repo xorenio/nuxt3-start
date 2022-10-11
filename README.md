@@ -6,7 +6,7 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 Make sure to install the dependencies:
 
-# Major suggestion would be to choose one package manager as they can clash
+### Major suggestion would be to choose one package manager as they can clash
 
 ```bash
 # yarn
