@@ -184,54 +184,6 @@ export const useAppStore = defineStore("app", {
     setCookieStatisticsStatus (status) {
       this.cookie.statistics = status;
     }
-    /**
-     * Set authToken and information related
-     * @param {string} token auth token received from API response
-     * @param {string} subdomain name of organization user is assigned for or 'admin' in none
-     * @param {boolean} keepLoggedIn should token be preserved or removed after dismounting the app
-     */
-    // setAuthToken(token, subdomain, keepLoggedIn) {
-    //   Cookie.set("AuthToken", token, {
-    //     domain: `.${cookie_domain}`,
-    //     ...(keepLoggedIn && { expires: 7 }),
-    //   });
-    //   Cookie.set("AuthSubdomain", subdomain, {
-    //     domain: `.${cookie_domain}`,
-    //     ...(keepLoggedIn && { expires: 7 }),
-    //   });
-    // },
-
-    /**
-     * Check if Auth token is already in the cookies and it's assigned to current subdomain
-     */
-    // getAuthToken() {
-    //   const token = Cookie.get("AuthToken", { domain: `${cookie_domain}` });
-    //   if (!token) return false;
-
-    //   const tokenSubdomain = Cookie.get("AuthSubdomain", { domain: `${cookie_domain}` });
-    //   const currentSubdomain = window.location.host.split(".")[0];
-    //   subdomain = tokenSubdomain;
-
-    //   if (tokenSubdomain !== currentSubdomain) {
-    //     clearCookies();
-    //     return false;
-    //   }
-
-    //   return token;
-    // },
-
-    /**
-     * Remove Auth token information related
-     */
-    // clearCookies() {
-    //   Cookie.remove("AuthToken", {
-    //     domain: `${cookie_domain}`,
-    //   });
-    //   Cookie.remove("AuthSubdomain", {
-    //     domain: `${cookie_domain}`,
-    //   });
-    //   return;
-    // }
   },
   getters: {
     getNavigationState: state => state.navigation.state,
